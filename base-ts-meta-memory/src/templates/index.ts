@@ -5,8 +5,9 @@ import { registerFlow } from "./registerFlow";
 import { menuFlow } from "./menuFlow";
 import { registroFamiliarFlow } from "./registroFamiliarFlow";
 import { registroIndividualFlow } from "./registroIndividualFlow";
+import { tipoSeguroFlow } from "./tipoSeguroFlow";
 
 
 export default createFlow([
-    mainFlow, faqFlow, registerFlow, menuFlow, registroFamiliarFlow,registroIndividualFlow
+    mainFlow, faqFlow, registerFlow, menuFlow, registroFamiliarFlow,registroIndividualFlow,tipoSeguroFlow
 ])

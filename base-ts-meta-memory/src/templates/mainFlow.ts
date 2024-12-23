@@ -7,7 +7,7 @@ import { menuFlow } from "./menuFlow";
 const mainFlow = addKeyword(EVENTS.WELCOME)
     .addAction(async(ctx, ctxfn)=>{
         //TODO: Validar en que etapa del registro se encuentra el usuario, y llevarlo on un gotoFlow
-        return ctxfn.gotoFlow(menuFlow);
+        ctxfn.gotoFlow(menuFlow);
     })
     
 export { mainFlow }
