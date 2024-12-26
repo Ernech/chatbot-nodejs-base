@@ -3,7 +3,7 @@ import { registroIndividualFlow } from "./registroIndividualFlow";
 
 
 const menuFlow = addKeyword(EVENTS.ACTION)
-  .addAction(async (ctx, { provider, flowDynamic }) => {
+  .addAction(async (ctx, { provider }) => {
     // Configurar el menú
     const list = {
       header: { type: "text", text: "Bienvenido a iSoft Seguros Masivos" },
@@ -32,9 +32,8 @@ const menuFlow = addKeyword(EVENTS.ACTION)
     {capture:true},
     async (ctx, { fallBack,flowDynamic,gotoFlow,state }) => {
       // Capturar la respuesta del usuario
-      const selectedOption = ctx.body; // Aquí obtienes el ID de la opción seleccionada
+      const selectedOption = ctx.body; 
       await state.update({"selectedOption":selectedOption})
-      // Manejar la respuesta según el ID
       switch (selectedOption) {
         case "1":
           await flowDynamic("Has seleccionado el plan VIVE.");
