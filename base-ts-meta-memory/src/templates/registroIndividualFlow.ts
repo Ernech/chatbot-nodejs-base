@@ -16,7 +16,7 @@ const registroIndividualFlow = addKeyword(EVENTS.ACTION)
         }
         await ctxFn.state.update({"email":ctx.body})
         const state = ctxFn.state.getMyState();
-        console.log(state.name, state.email)//TODO: Implementar el servicio para guardar en base de datos
+        console.log(state.name, state.email, state.selectedOption)//TODO: Implementar el servicio para guardar en base de datos
         return ctxFn.endFlow(`Excelente! Tus datos fueron registrados\n\nNombre Asegurado: ${state.name}\nCorreo Asegurado: ${state.email}`);
     }        
 )
