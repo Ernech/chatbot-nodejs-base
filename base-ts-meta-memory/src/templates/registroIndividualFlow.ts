@@ -12,7 +12,7 @@ const registroIndividualFlow = addKeyword(EVENTS.ACTION)
     async(ctx,ctxFn)=>{
         const emailFormat = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
         if(!emailFormat.test(ctx.body)){
-            return ctxFn.fallBack("Por favor, ingresa un correo lectronico valido");
+            return ctxFn.fallBack("Por favor, ingresa un correo electronico valido");
         }
         await ctxFn.state.update({"email":ctx.body})
         const state = ctxFn.state.getMyState();
