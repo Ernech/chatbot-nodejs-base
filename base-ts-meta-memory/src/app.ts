@@ -3,11 +3,11 @@ import { createBot, createProvider, createFlow, addKeyword, utils } from '@build
 import { MemoryDB as Database } from '@builderbot/bot'
 import templates from './templates'
 import { provider } from './provider'
+import * as dotenv from 'dotenv';
 
-const PORT = process.env.PORT ?? 3008
+dotenv.config();
 
-
-
+const PORT = parseInt(process.env.PORT, 10) || 3000;
 
 const main = async () => {
     
