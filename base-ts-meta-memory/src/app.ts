@@ -16,7 +16,6 @@ const main = async () => {
         provider: provider,
         database: new Database(),
     })
-
    
     httpServer(+PORT)
 }
